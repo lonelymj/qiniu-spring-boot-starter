@@ -62,7 +62,7 @@ public class QiNiu_UpLoad_Img_StarterService {
      *
      * @return
      */
-    private String getUpLoadToken() {
+    public String getUpLoadToken() {
         Auth auth = Auth.create(accessKey, secretKey);
         return auth.uploadToken(bucket);
     }
