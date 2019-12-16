@@ -8,7 +8,7 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
-import org.apache.commons.lang.StringUtils;
+import com.qiniu.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -106,6 +106,7 @@ public class QiNiu_UpLoad_Img_StarterService {
      * @return
      */
     private String getkey(MultipartFile multipartFile, List<String> path) {
+
         String originalFilename = multipartFile.getOriginalFilename();
         String suffix = originalFilename.substring(originalFilename.indexOf("."));
         String fileName = System.currentTimeMillis() + suffix;
